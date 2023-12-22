@@ -1,0 +1,118 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+
+        <!----==============content_all_warpper==============--->
+        <div id="wrapper_full" class="content_all_warpper">
+          <!----==============content_all_warpper==============--->
+          <!----==============page header==============--->
+          <section class="page_header_default pg_bg_cover alignment_center">
+            <div class="bakground_cover" style="background-image:url({% static 'assets/images/page-image-1-min.jpg'%})"></div>
+            <div class="page_header_content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="banner_title_inner">
+                      <div class="title">
+                        <span class="main_tit">Подробнее об услуге</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 vankine">
+                    <ul class="breadcrumb m-auto">
+                      <li>
+                        <a href="{% url 'services' %}">Наши Услуги</a>
+                      </li>
+                      <li class="active">{{services.title}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!----==============page header==============--->
+          <!--content start-->
+          <div id="content" class="site-content">
+            <!---portfolio-->
+            <section class="portfolio-dtail-section">
+              <!---============spacing==========--->
+              <div class="pd_top_90"></div>
+              <!---============spacing==========--->
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8 col-md-12 pd_right_30">
+                    <div class="image_box">
+                      <img src="{{services.image.url}}" class="img-fluid w_100" alt="img" />
+                    </div>
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                    <div class="section_title medium type_one">
+                      <div class="title_whole">
+                        <h2 class="title">  Почему Вам Следует Выбрать Нас</h2>
+                      </div>
+                      <p> Не важно, на какой стадии развития вашего бизнеса, бизнес-план от MSBusiness станет вашей надежной дорожной картой к успеху. Свяжитесь с нами сегодня, и мы начнем разрабатывать стратегию, которая приведет вас к вашим целям и успеху вашего бизнеса.</p>
+                    </div>
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="position-relative">
+                          <ul class="list_box list">
+                            {% for benefit in benefits_footer %}
+                            <li>
+                              <div class="d-flex align-items-center">
+                                <div class="icon trans">
+                                  <i class=" fi-rr-checkbox"></i>
+                                </div>
+                                <a class="links" href="{% url 'benefits' %}"> {{benefit.title}} </a>
+                              </div>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                          <!---============spacing==========--->
+                          <div class="pd_bottom_30"></div>
+                          <!---============spacing==========--->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                    
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                  </div>
+                  <div class="col-lg-4 col-md-12">
+                    <div class="section_title medium type_one">
+                      <div class="title_whole">
+                        <h2 class="title"> {{services.title}}</h2>
+                      </div>
+                      <p> {{services.descriptions}}</p>
+                    </div>
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                    <!---============spacing==========--->
+                    <div class="pd_bottom_30"></div>
+                    <!---============spacing==========--->
+                  </div>
+                </div>
+              </div>
+              <!---============spacing==========--->
+              <div class="pd_bottom_60"></div>
+              <!---============spacing==========--->
+            </section>
+            <!---slider end-->
+          </div>
+          <!--content end-->
+          {% include 'include/footer.html' %}
+          {% endblock %}

@@ -1,0 +1,162 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+        <!----==============content_all_warpper==============--->
+        <div id="wrapper_full" class="content_all_warpper">
+          <!----==============content_all_warpper==============--->
+          <!----==============page header==============--->
+          <section class="page_header_default pg_bg_cover alignment_center">
+            <div class="bakground_cover" style="background-image:url({% static 'assets/images/page-image-1-min.jpg'%})"></div>
+            <div class="page_header_content">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="banner_title_inner">
+                      <div class="title">
+                        <span class="main_tit">Строительная компания Rayan Building</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 vankine">
+                    <ul class="breadcrumb m-auto">
+                      <li>
+                        <a href="{% url 'projects' %}">Наши Проекты</a>
+                      </li>
+                      <li class="active"> Rayan Building</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!----==============page header==============--->
+          <!--content start-->
+          <div id="content" class="site-content">
+            <section class="blog-detail-section">
+              <!---============spacing==========--->
+              <div class="pd_top_90"></div>
+              <!---============spacing==========--->
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="blog_single_content">
+                      <div class="single-thumbnail">
+                        <img src="{{projects.image.url}}" class="img-fluid" alt="img" />
+                      </div>
+                      <div class="single_content_upper">
+                        <div class="post_single_content">
+                          <div class="section_title small type_one mr_bottom_25">
+                            <div class="title_whole">
+                              <h3 class="title"> {{projects.descriptions}}  </h3>
+                            </div>
+                          </div>
+
+                          <div class="row mr_bottom_20">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <div class="position-relative">
+                                <ul class="list_box list">
+                                  <li>
+                                    <div class="d-flex align-items-center">
+                                      <div class="icon trans">
+                                        <i aria-hidden="false" class="fas fa-check-circle"></i>
+                                      </div>
+                                       Профессионализм
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex align-items-center">
+                                      <div class="icon trans">
+                                        <i aria-hidden="false" class="fas fa-check-circle"></i>
+                                      </div>
+                                       Индивидуальный подход
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex align-items-center">
+                                      <div class="icon trans">
+                                        <i aria-hidden="false" class="fas fa-check-circle"></i>
+                                      </div>
+                                       Стратегическое мышление
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <div class="position-relative">
+                                <ul class="list_box list">
+                                  <li>
+                                    <div class="d-flex align-items-center">
+                                      <div class="icon trans">
+                                        <i aria-hidden="false" class="fas fa-check-circle"></i>
+                                      </div>
+                                       Мониторинг и Оценка 
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex align-items-center">
+                                      <div class="icon trans">
+                                        <i aria-hidden="false" class="fas fa-check-circle"></i>
+                                      </div>
+                                       Специализированные знания 
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex align-items-center">
+                                      <div class="icon trans">
+                                        <i aria-hidden="false" class="fas fa-check-circle"></i>
+                                      </div>
+                                       Доверие и Конфиденциальность 
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                              <div class="position-relative">
+                                <ul class="list_box list">
+                                  <li>
+                                    <div class="d-flex align-items-center">
+                                      <div class="icon trans">
+                                        <i aria-hidden="false" class="fas fa-check-circle"></i>
+                                      </div>
+                                       Гибкость и Адаптивность 
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex align-items-center">
+                                      <div class="icon trans">
+                                        <i aria-hidden="false" class="fas fa-check-circle"></i>
+                                      </div>
+                                       Систематичность и Последовательность
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="d-flex align-items-center">
+                                      <div class="icon trans">
+                                        <i aria-hidden="false" class="fas fa-check-circle"></i>
+                                      </div>
+                                       Ориентированность на Результаты
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---============spacing==========--->
+              <div class="pd_bottom_70"></div>
+              <!---============spacing==========--->
+            </section>
+          </div>
+          <!--content end-->
+          {% include 'include/footer.html' %}
+          {% endblock %}
